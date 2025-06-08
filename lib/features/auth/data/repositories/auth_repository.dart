@@ -11,14 +11,14 @@ class AuthRepository {
     );
 
     if (response.success) {
-      final token = response.data['token'];
-      final refresToken = response.data['accessToken'];
+      final accessToken = response.data['accessToken'];
+      final refreshToken = response.data['refreshToken'];
 
       log(response.data.toString());
 
       return {
-        'accessToken': token,
-        'refreshToken': refresToken,
+        'accessToken': accessToken,
+        'refreshToken': refreshToken,
       };
     } else {
       throw Exception('err');
