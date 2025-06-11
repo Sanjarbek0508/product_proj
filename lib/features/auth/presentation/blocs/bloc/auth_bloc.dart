@@ -1,11 +1,7 @@
-import 'dart:developer';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:product_project/core/constants/routing.dart';
 import 'package:product_project/core/services/token_storage.dart';
 import 'package:product_project/features/auth/data/repositories/auth_repository.dart';
-import 'package:product_project/features/home/presentation/screens/home_screen.dart';
 
 part 'auth_event.dart';
 part 'auth_state.dart';
@@ -22,8 +18,6 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
           "password": event.password,
         });
 
-        log(tokens.toString());
-
         await TokenStorage.saveTokens(
           tokens['accessToken']!,
           tokens['refreshToken']!,
@@ -35,11 +29,6 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
             refreshToken: tokens['refreshToken']!,
           ),
         );
-
-        log(event.password);
-        log(event.username);
-
-        log('Success');
       } catch (e) {
         emit(
           AuthError(

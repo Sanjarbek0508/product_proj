@@ -4,8 +4,8 @@ import 'package:product_project/core/constants/routing.dart';
 import 'package:product_project/core/constants/showtoast.dart';
 import 'package:product_project/features/auth/data/repositories/auth_repository.dart';
 import 'package:product_project/features/auth/presentation/blocs/bloc/auth_bloc.dart';
-import 'package:product_project/features/auth/presentation/screens/login_screen.dart';
 import 'package:product_project/features/home/presentation/screens/home_screen.dart';
+import 'package:product_project/features/onboarding/presentation/screens/onboarding_screen.dart';
 
 class MainApp extends StatelessWidget {
   const MainApp({super.key});
@@ -31,7 +31,7 @@ class MainApp extends StatelessWidget {
               ShowToast.error(context, "Login failed");
             }
           },
-          child: LoginScreen(),
+          child: OnboardingScreen(),
         ),
       ),
     );
