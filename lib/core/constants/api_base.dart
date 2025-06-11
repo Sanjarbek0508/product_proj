@@ -2,10 +2,9 @@ import 'dart:developer';
 import 'package:dio/dio.dart';
 import 'package:product_project/core/constants/api_endpoints.dart';
 import 'package:product_project/core/constants/app_response.dart';
-import 'package:product_project/core/constants/authorization.dart';
+import 'package:product_project/core/services/token_storage.dart';
 
 class Api {
-  static Authorization authorization = Authorization();
   static Future<AppResponse> post({
     required String path,
     Map<String, dynamic>? body,
@@ -15,9 +14,10 @@ class Api {
     bool token = false,
   }) async {
     try {
+      final accessToken = await TokenStorage.accessToken;
       final headers = token
           ? {
-              'Authorization': authorization,
+              'Authorization': 'Bearer $accessToken',
               'Content-Type': 'application/json',
             }
           : {
@@ -69,9 +69,10 @@ class Api {
     bool token = false,
   }) async {
     try {
+      final accessToken = await TokenStorage.accessToken;
       final headers = token
           ? {
-              'Authorization': authorization,
+              'Authorization': 'Bearer $accessToken',
               'Content-Type': 'application/json',
             }
           : {
@@ -145,9 +146,10 @@ class Api {
     bool token = false,
   }) async {
     try {
+      final accessToken = await TokenStorage.accessToken;
       final headers = token
           ? {
-              'Authorization': authorization,
+              'Authorization': 'Bearer $accessToken',
               'Content-Type': 'application/json',
             }
           : {
