@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:product_project/core/constants/app_wrapper.dart';
 import 'package:product_project/core/constants/routing.dart';
 import 'package:product_project/core/constants/text_style.dart';
-import 'package:product_project/features/home/presentation/screens/home_screen.dart';
+import 'package:product_project/features/auth/presentation/screens/login_screen.dart'; 
 
 class OnboardingScreen extends StatelessWidget {
   const OnboardingScreen({super.key});
@@ -13,7 +13,7 @@ class OnboardingScreen extends StatelessWidget {
       return Scaffold(
         body: Expanded(
           child: GestureDetector(
-            onTap: () => AppRouter.go(HomeScreen()),
+            onTap: () => AppRouter.go(LoginScreen()),
             child: Container(
               alignment: Alignment.center,
               decoration: BoxDecoration(
@@ -23,9 +23,9 @@ class OnboardingScreen extends StatelessWidget {
               width: double.infinity,
               child: Text(
                 'Homify',
-                style: Manserrat.bold(
-                  color: colors.lightGreen1,
-                  size: 16,
+                style: Manserrat.semiBold(
+                  color: colors.lightGreen2,
+                  size: 34,
                 ),
               ),
             ),
