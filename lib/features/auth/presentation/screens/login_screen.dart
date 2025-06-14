@@ -25,9 +25,9 @@ class LoginScreen extends HookWidget {
             Expanded(
               flex: 3,
               child: Padding(
-                padding: EdgeInsets.only(top: 60),
+                padding: EdgeInsets.only(top: 140),
                 child: Text(
-                  'Welcome to \nHomify',
+                  'Welcome to \nHomify.',
                   style: Manserrat.black(color: colors.black, size: 48),
                 ),
               ),
@@ -43,9 +43,9 @@ class LoginScreen extends HookWidget {
                         width: 300,
                         child: CustomTextfield(
                           prefixIcon: Icon(
-                            IconsaxPlusBroken.login_1,
+                            Icons.person,
                             color: colors.darkGreen1,
-                            size: 26,
+                            size: 22,
                           ),
                           backgroundColor: colors.lightGreen3,
                           controller: usernameCtrl,
@@ -56,15 +56,15 @@ class LoginScreen extends HookWidget {
                     ],
                   ),
                   SizedBox(
-                    height: 10,
+                    height: 16,
                   ),
                   SizedBox(
                     width: 300,
                     child: CustomTextfield(
                       prefixIcon: Icon(
-                        IconsaxPlusBroken.lock,
+                        Icons.lock,
                         color: colors.darkGreen1,
-                        size: 26,
+                        size: 22,
                       ),
                       backgroundColor: colors.lightGreen3,
                       controller: passwordCtrl,
@@ -73,7 +73,7 @@ class LoginScreen extends HookWidget {
                     ),
                   ),
                   Padding(
-                    padding: EdgeInsets.only(top: 10),
+                    padding: EdgeInsets.only(top: 18),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
@@ -103,7 +103,7 @@ class LoginScreen extends HookWidget {
               ),
             ),
             CustomButton(
-                margin: EdgeInsets.only(bottom: 25),
+                margin: EdgeInsets.only(bottom: 35),
                 wid: 300,
                 hei: 56,
                 backgroundColor: colors.darkGreen1,
@@ -114,38 +114,14 @@ class LoginScreen extends HookWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text(
-                      'Continune',
+                      'Continue',
                       style: Manserrat.bold(
-                        color: colors.lightGreen1,
-                        size: 28,
+                        color: colors.scaffoldBackgroundColor,
+                        size: 17,
                       ),
                     ),
                   ],
                 ))
-            // BlocListener<AuthBloc, AuthState>(
-            //   listener: (context, state) {
-            //     if (state is AuthSuccess) {
-            //       AppRouter.go(HomeScreen());
-            //     } else if (state is AuthError) {
-            //       ShowToast.error(context, "Errrrr");
-            //     } else if (state is AuthLoading) {
-            //       AppLoadingScreen();
-            //     }
-            //   },
-            //   child: IconButton(
-            //     onPressed: () {
-            //       context.read<AuthBloc>().add(
-            //             AuthLoginRequested(
-            //               password: passwordCtrl.text,
-            //               username: usernameCtrl.text,
-            //             ),
-            //           );
-            //     },
-            //     icon: Icon(
-            //       Icons.add,
-            //     ),
-            //   ),
-            // ),
           ],
         ),
       );

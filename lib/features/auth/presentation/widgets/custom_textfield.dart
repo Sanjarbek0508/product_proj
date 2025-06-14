@@ -49,11 +49,11 @@ class CustomTextfield extends StatelessWidget {
       decoration: InputDecoration(
         prefixIcon: prefixIcon,
         suffixIcon: suffixIcon,
-        hintStyle: Manserrat.light(
+        hintStyle: Manserrat.medium(
           color: colors.grey,
           size: 14,
         ),
-        labelStyle: Manserrat.light(
+        labelStyle: Manserrat.medium(
           color: colors.grey,
           size: 14,
         ),
@@ -65,42 +65,42 @@ class CustomTextfield extends StatelessWidget {
         suffix: suffixWidget,
         prefix: prefixWidget,
         border: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(20),
+          borderRadius: BorderRadius.circular(13),
           borderSide: BorderSide(
             color: colors.darkGreen1,
             width: 0.2,
           ),
         ),
         enabledBorder: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(20),
+          borderRadius: BorderRadius.circular(13),
           borderSide: BorderSide(
             color: colors.darkGreen1,
             width: 0.2,
           ),
         ),
         disabledBorder: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(20),
+          borderRadius: BorderRadius.circular(13),
           borderSide: BorderSide(
             color: colors.darkGreen1,
             width: 0.4,
           ),
         ),
         focusedBorder: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(20),
+          borderRadius: BorderRadius.circular(13),
           borderSide: BorderSide(
             color: colors.darkGreen1,
             width: 0.6,
           ),
         ),
         errorBorder: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(20),
+          borderRadius: BorderRadius.circular(13),
           borderSide: BorderSide(
             color: colors.red,
             width: 0.8,
           ),
         ),
         focusedErrorBorder: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(20),
+          borderRadius: BorderRadius.circular(13),
           borderSide: BorderSide(
             color: colors.red,
             width: 0.8,
